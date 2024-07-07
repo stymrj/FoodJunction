@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Junction</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="icons" href="assets/icon.png">
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+     <header>
+        <div class="nav">
+            <a href="#" class="logo"><ion-icon name="fast-food"></ion-icon> Food Junction</a>
+            <div class="box">
+                <div class="cart-count">0</div>
+                <ion-icon name="cart" id="cart-icon"></ion-icon>
+            </div>
+            <div class="cart">
+                <div class="cart-title"><b>Cart Items</b></div>
+                <div class="cart-content"></div>
+                <div class="total">
+                    <div class="total-title"><b>Total</b></div>
+                    <div class="total-price">Rs. 0</div>
+                </div>
+                <button class="btn-buy" onclick="showAlert()"><b>Place Order</b></button>
+                <ion-icon name="close" id="cart-close"></ion-icon>
+            </div>
+        </div>
+     </header>
+     <!-- Products -->
+      <div class="container">
+        <h2 class="title"><b>Let's Order Some Delicious Food</b></h2>
+        <div class="shop-content">
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/burger.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Burger</b></h2>
+                <h6>Crispy Chicken</h6>
+                <span class="food-price">Price: 99</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/chicke leg.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Chicken Leg</b></h2>
+                <h6>3 Piece</h6>
+                <span class="food-price">Price: 199</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/chiicken nuggets.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Nuggets</b></h2>
+                <h6>Chicken 500gm</h6>
+                <span class="food-price">Price: 89</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/freench fries.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>French Fries</b></h2>
+                <h6>250gm</h6>
+                <span class="food-price">Price: 149</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/grill.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Grill</b></h2>
+                <h6>Whole Chicken</h6>
+                <span class="food-price">Price: 299</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/mojitos.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Mojito</b></h2>
+                <h6>Chilled 500ml</h6>
+                <span class="food-price">Price: 69</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/shawarma.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Shawarma</b></h2>
+                <h6>Chicken</h6>
+                <span class="food-price">Price:129</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+            <div class="food-box">
+                <div class="pic">
+                    <img src="assets/tandori.jpg" class="food-image">
+                </div>
+                <h2 class="food-title"><b>Tandori Chicken</b></h2>
+                <h6>full chicken</h6>
+                <span class="food-price">Price: 499</span>
+                <ion-icon name="cart" class="add-cart"></ion-icon>
+            </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+const btnCart = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
 const btnClose = document.querySelector("#cart-close");
 
@@ -28,6 +29,7 @@ function loadContent(){
         btn.addEventListener('click', removeItem);
     });
 
+
     // cart quantity 
     let qntyElement = document.querySelectorAll('.cart-quantity');
     qntyElement.forEach((input)=>{
@@ -38,7 +40,7 @@ function loadContent(){
 
     let cartBtns = document.querySelectorAll('.add-cart');
     cartBtns.forEach((btn) =>{
-        btn.addEventListener('click', addCart);
+        btn.addEventListener('click', addCart);                 
     });
 
     // uodate total
@@ -116,11 +118,11 @@ function updateTotal(){
     const cartItems = document.querySelectorAll(".cart-box");
     const totalValue = document.querySelector(".total-price");
 
+
     let total = 0;
     cartItems.forEach(product=>{
         let priceElement = product.querySelector('.cart-price');
         let price = parseFloat(priceElement.innerHTML.trim());
-
         let qty = product.querySelector('.cart-quantity').value;
 
         total += (price * qty);
@@ -134,6 +136,7 @@ function updateTotal(){
     let count = itemList.length;
     cartCount.innerHTML = count;
 }
+
 
 function showAlert(){
     alert("Thanks for Shopping...");

@@ -1,231 +1,274 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* ---------------------------------------
+   Fonts
+---------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
-/* Reset and Base Styles */
+/* ---------------------------------------
+   Base Styles
+---------------------------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+    background-color: black;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Header */
+/* ---------------------------------------
+   Header & Navigation
+---------------------------------------- */
 header {
-  background-color: #ffcc00;
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: yellow;
+    color: black;
+    z-index: 99;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo {
-  font-size: 1.5rem;
-  color: #333;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
 }
 
-.cart-icon {
-  position: relative;
-  cursor: pointer;
+.box {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
 }
 
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: red;
-  color: #fff;
-  border-radius: 50%;
-  padding: 0.2rem 0.5rem;
-  font-size: 0.8rem;
-}
-
-/* Main Content */
+/* ---------------------------------------
+   Products Section
+---------------------------------------- */
 .container {
-  padding: 6rem 2rem 2rem;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #e63946;
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem;
+    width: 100%;
 }
 
 .shop-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: red;
 }
 
 .food-box {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 1rem;
-  position: relative;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+    border-radius: 2px;
+    position: relative;
 }
 
-.food-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.pic {
+    overflow: hidden;
 }
 
-.pic:hover .food-image {
-  transform: scale(1.1);
+.pic:hover img {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
 }
 
 .food-title {
-  margin: 0.5rem 0;
-  color: #e63946;
-}
-
-.food-description {
-  font-size: 0.9rem;
-  color: #555;
+    color: red;
 }
 
 .food-price {
-  display: block;
-  margin: 0.5rem 0;
-  font-weight: bold;
+    font-weight: 500;
 }
 
 .add-cart {
-  background-color: #e63946;
-  color: #fff;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: red;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 2rem;
+    border-radius: 2rem;
 }
 
-/* Cart Sidebar */
+.add-cart:hover {
+    background-color: rgb(46, 243, 46);
+}
+
+/* ---------------------------------------
+   Cart Icon
+---------------------------------------- */
+#cart-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: red;
+    text-align: center;
+    font-weight: 700;
+    z-index: 99;
+}
+
+/* ---------------------------------------
+   Cart Sidebar
+---------------------------------------- */
 .cart {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 320px;
-  height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  z-index: 1001;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 5px rgba(40, 37, 37, 0.1);
+    z-index: 100;
+    transition: 0.5s;
 }
 
-.cart.active {
-  right: 0;
+.cart-activate {
+    right: 0;
 }
 
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #ffcc00;
-}
-
-.cart-header h3 {
-  margin: 0;
-}
-
-#cart-close {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.cart-content {
-  flex: 1;
-  padding: 1rem;
-  overflow-y: auto;
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 20px;
+    color: red;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .cart-box {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 32% 50% 15%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
 }
 
 .cart-img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-right: 1rem;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
 }
 
 .detail-box {
-  flex: 1;
-}
-
-.cart-food-title {
-  font-weight: bold;
-  color: #e63946;
+    display: grid;
+    row-gap: 0.5rem;
 }
 
 .price-box {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.cart-price,
-.cart-amt {
-  font-size: 0.9rem;
+.cart-food-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: red;
+}
+
+.cart-price {
+    font-weight: 600;
 }
 
 .cart-quantity {
-  width: 50px;
-  margin-top: 0.5rem;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .cart-remove {
-  color: red;
-  cursor: pointer;
-  margin-left: 0.5rem;
-}
-
-.cart-footer {
-  padding: 1rem;
-  border-top: 1px solid #ccc;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
 }
 
 .total {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: red;
+}
+
+.total-price {
+    margin-left: 0.5rem;
 }
 
 .btn-buy {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #e63946;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+    padding: 12px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#cart-close {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
